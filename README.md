@@ -1,5 +1,17 @@
 # Eat-Da-Burger! 
-Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
+* By Kate Christian | [Portfolio: k8xian.github.io](https://k8xian.github.io)
+* for [Northwestern University's Full Stack Flex Coding Bootcamp](https://bootcamp.northwestern.edu/coding/)
+* Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
+
+* Deployment
+
+* Note the cute burger favicon! 
+
+## Instructions for running locally
+* clone this [repository](https://github.com/k8xian/burger) to your computer
+* cd into the repo
+* run **npm install**
+* run **node server.js**
 
 
 ## Credits
