@@ -11,6 +11,8 @@ body{
     letter-spacing: 1px;
     color: white;
     text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .title{
