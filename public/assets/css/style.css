@@ -84,6 +84,7 @@ ul{
     max-width: 960px;
     min-width: 300px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .burger__block{

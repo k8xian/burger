@@ -1,5 +1,7 @@
+//requiring permission/port settings for mysql
 const connection = require("../config/connection.js");
 
+//printing question marks properly to prevent injection attacks
 function printQuestionMarks(num) {
     var arr = [];
 
@@ -8,7 +10,7 @@ function printQuestionMarks(num) {
     }
     return arr.toString();
 }
-
+//turning an object into something sequel can understand
 function objToSql(ob) {
     var arr = [];
 
@@ -24,7 +26,9 @@ function objToSql(ob) {
     return arr.toString();
 }
 
+//the orm business
 var orm = {
+ //selectAll query to pull the entire list
     selectAll: function (burgers, cb) {
         var queryString = "SELECT * FROM " + burgers + ";";
         connection.query(queryString, function (err, result) {
@@ -34,6 +38,7 @@ var orm = {
             cb(result);
         });
     },
+//insertOne query to insert a value into the database
     insertOne: function (table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
 
@@ -53,9 +58,9 @@ var orm = {
             cb(result);
         });
     },
+//updateOne function to update devoured values in the database
     updateOne: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
-
         queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
@@ -69,6 +74,7 @@ var orm = {
             cb(result);
         });
     },
+//delete, to delete a record with a where clause
     delete: function (table, condition, cb) {
         var queryString = "DELETE FROM " + table;
         queryString += " WHERE ";
@@ -83,5 +89,5 @@ var orm = {
         });
     }
 }
-
+//making this output usable by 'require' in other files
 module.exports = orm;

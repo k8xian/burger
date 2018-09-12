@@ -5,11 +5,17 @@
 
 * Deployment
 
+## Development
+* Basic MySQL CRUD App using ORM
+
+## Design
 * Note the cute burger favicon! 
+* Works on mobile, too! 
 
 ## Instructions for running locally
 * clone this [repository](https://github.com/k8xian/burger) to your computer
 * cd into the repo
+* create a .env file with your local MySQL credentials
 * run **npm install**
 * run **node server.js**
 

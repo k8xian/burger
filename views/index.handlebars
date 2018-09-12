@@ -1,5 +1,6 @@
 <div class="burger__card">
   <h2>Your Burgers</h2>
+	<!--looping through the data for !devoured burgers-->
   <div class="burger__list">
     {{#each burgers}}
     {{#unless devoured}}
@@ -10,7 +11,8 @@
 </div>
 <div class="burger__card">
   <h2>Past Burgers</h2>
-
+  
+  <!--looping through the data for devoured burgers-->
   <div class="burger__list devoured__burgers">
     {{#each burgers}}
     {{#if devoured}}

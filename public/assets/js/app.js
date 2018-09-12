@@ -7,8 +7,7 @@ $(function () {
       var newDevourState = {
         devoured: newDevour
       };
-  
-      // Send the PUT request.
+//sending new devoured state to the api to trigger the status change in the database
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: newDevourState
@@ -20,17 +19,15 @@ $(function () {
         }
       );
     });
-  
+
     $(".create-form").on("submit", function (event) {
-      // Make sure to preventDefault on a submit event.
       event.preventDefault();
-  
+//gathering form data 
       var newBurger = {
         name: $("#ca").val().trim(),
         devoured: $("[name=devoured]:checked").val().trim()
       };
-  
-      // Send the POST request.
+//sending the new data information to the api to trigger it being added to the database
       $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
@@ -42,11 +39,12 @@ $(function () {
         }
       );
     });
-  
+//collecting the Id to send delete request to the api  
     $(".delete-burger").on("click", function (event) {
       var id = $(this).data("id");
   
-      // Send the DELETE request.
+//sending the delete request to the API to trigger removal from the database
+//not as safe as hiding "defunct" data, but just to demonstrate CRUD
       $.ajax("/api/burgers/" + id, {
         type: "DELETE"
       }).then(
