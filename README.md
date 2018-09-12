@@ -3,7 +3,7 @@
 * for [Northwestern University's Full Stack Flex Coding Bootcamp](https://bootcamp.northwestern.edu/coding/)
 * Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
 
-* Deployment
+*Deployment:  [https://]burger-k8xian.herokuapp.com](https://burger-k8xian.herokuapp.com/)*
 
 ## Development
 * Basic MySQL CRUD App using ORM
